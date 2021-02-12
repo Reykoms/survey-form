@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">  
+    <title>Survey Form</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header" class="text-center">
+            <img class="logo" src="https://raw.githubusercontent.com/freeCodeCamp/assets/f0d5eeeaed7a932fff817361939c4745bad3389f/assets/logos/FCCfire.svg" alt="">
+            <h1 id="title">Virtual Event Survey Form</h1>
+            <p id="description">We really appreciate you taking the time out to share your experience with us</p>
+        </div>
+        <div id="tab" class="text-center">
+            <button class="tablinks" onclick="openForm(event, 'attendees')">Attendees</button>
+            <button class="tablinks" onclick="openForm(event, 'sponsors')">Sponsors</button>
+        </div>
+        <!-- Attendees -->
+        <div id="attendees" class="tab-content">
+        <form id="survey-form">
+            <div class="form-group">
+                <label for="name" id="name-label">Name<span class="required">*</span></label>
+                <input type="text" id="name" class="form-control" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email" id="email-label">Email<span class="required">*</span></label>
+                <input type="email" id="email" class="form-control" placeholder="Email" required> 
+            </div>
+            
+            <div class="form-group">
+                <label for="number" id="number-label">Age<span class="clue"> (optional)</span></label>
+                <input type="number" name="age" id="number" class="form-control" min="1" max="100" placeholder="Age">
+            </div>
+            <div class="form-group">
+                <p>Which option best describe your current role?</p>
+                <select id="dropdown" class="form-control">
+                    <option selected="" disabled="" value="">Select an option</option>
+                    <option value="student">Student</option>
+                    <option value="full-time-job">Full Time Job</option>
+                    <option value="full-time-learner">Full Time Learner</option>
+                    <option value="prefer-not-to-say">Prefer Not To Say</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>How would you rate this event?</p>
+                <p class="xs-text">1 - Poor &nbsp; 10 - Excellent</p>
+                <label><input type="radio" name="rate-attendees" class="input-radio" value="1"><span class="sm-text">1</span></label>
+                <label><input type="radio" name="rate-attendees" class="input-radio" value="2"><span class="sm-text">2</span></label>
+                <label><input type="radio" name="rate-attendees" class="input-radio" value="3"><span class="sm-text">3</span></label>
+                <label><input type="radio" name="rate-attendees" class="input-radio" value="4"><span class="sm-text">4</span></label>
+                <label><input type="radio" name="rate-attendees" class="input-radio" value="5"><span class="sm-text">5</span></label>
+                <label><input type="radio" name="rate-attendees" class="input-radio" value="6"><span class="sm-text">6</span></label>
+                <label><input type="radio" name="rate-attendees" class="input-radio" value="7"><span class="sm-text">7</span></label>
+                <label><input type="radio" name="rate-attendees" class="input-radio" value="8"><span class="sm-text">8</span></label>
+                <label><input type="radio" name="rate-attendees" class="input-radio" value="9"><span class="sm-text">9</span></label>
+                <label><input type="radio" name="rate-attendees" class="input-radio" value="10"><span class="sm-text">10</span></label>
+            </div>
+            <div class="form-group">
+                <p>How likely are you to recommend this event?</p>
+                <p class="xs-text">1 - Not at all likely &nbsp; 10 - Very likely</p>
+                <label><input type="radio" name="recommend-attendees" class="input-radio" value="1"><span class="sm-text">1</span></label>
+                <label><input type="radio" name="recommend-attendees" class="input-radio" value="2"><span class="sm-text">2</span></label>
+                <label><input type="radio" name="recommend-attendees" class="input-radio" value="3"><span class="sm-text">3</span></label>
+                <label><input type="radio" name="recommend-attendees" class="input-radio" value="3"><span class="sm-text">4</span></label>
+                <label><input type="radio" name="recommend-attendees" class="input-radio" value="3"><span class="sm-text">5</span></label>
+                <label><input type="radio" name="recommend-attendees" class="input-radio" value="3"><span class="sm-text">6</span></label>
+                <label><input type="radio" name="recommend-attendees" class="input-radio" value="3"><span class="sm-text">7</span></label>
+                <label><input type="radio" name="recommend-attendees" class="input-radio" value="3"><span class="sm-text">8</span></label>
+                <label><input type="radio" name="recommend-attendees" class="input-radio" value="3"><span class="sm-text">9</span></label>
+                <label><input type="radio" name="recommend-attendees" class="input-radio" value="3"><span class="sm-text">10</span></label>
+
+            </div>
+            <div class="form-group">
+                <p>How did you first hear about this event?</p>
+                <label><input type="checkbox" name="heard" class="input-checkbox" value="search-engine"><span class="sm-text">Search Engine</span></label>
+                <label><input type="checkbox" name="heard" class="input-checkbox" value="fcc-website"><span class="sm-text">freeCodeCamp Website</span></label>   
+                <label><input type="checkbox" name="heard" class="input-checkbox" value="social-media"><span class="sm-text">Social Media</span></label>
+                <label><input type="checkbox" name="heard" class="input-checkbox" value="youtube"><span class="sm-text">Youtube</span></label>   
+                <label><input type="checkbox" name="heard" class="input-checkbox" value="print"><span class="sm-text">Print</span></label>   
+                <label><input type="checkbox" name="heard" class="input-checkbox" value="flyers"><span class="sm-text">Flyers</span></label>   
+                <label><input type="checkbox" name="heard" class="input-checkbox" value="radio"><span class="sm-text">Radio</span></label>
+                <label><input type="checkbox" name="heard" class="input-checkbox" value="word-of-mouth"><span class="sm-text">Word Of Mouth</span></label>   
+            </div>
+            <div class="form-group card">
+                <p>What, if anything, did you dislike about this event?</p>
+                <textarea name="dislike-attendees" id="textarea-dislike-attendees" class="input-textarea form-control"></textarea>
+            </div>
+            <div class="form-group card">
+                <p>Is there any thing else you would like us to know?</p>
+                <textarea name="comment-attendees" id="comment-attendees" class="input-textarea form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit" class="form-control submit">Submit</button>
+            </div>
+        </form>
+        </div>
+
+        <!-- Sponsors -->
+        <div id="sponsors" class="tab-content">
+        <form id="survey-form-2" class="survey-form">
+            <div class="form-group">
+                <label for="name-2" id="name-label-2">Name<span class="required">*</span></label>
+                <input type="text" id="name-2" class="form-control" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email-2" id="email-label-2">Email<span class="required">*</span></label>
+                <input type="email" id="email-2" class="form-control" placeholder="Email" required> 
+            </div>
+            <div class="form-group">
+                <p>Please rate your overall thoughts on this event</p>
+                <p class="xs-text">1 - Poor &nbsp; 10 - Excellent</p>
+
+                <label><input type="radio" name="rate-sponsor" class="input-radio" value="1"><span class="sm-text">1</span></label>
+                <label><input type="radio" name="rate-sponsor" class="input-radio" value="2"><span class="sm-text">2</span></label>
+                <label><input type="radio" name="rate-sponsor" class="input-radio" value="3"><span class="sm-text">3</span></label>
+                <label><input type="radio" name="rate-sponsor" class="input-radio" value="4"><span class="sm-text">4</span></label>
+                <label><input type="radio" name="rate-sponsor" class="input-radio" value="5"><span class="sm-text">5</span></label>
+                <label><input type="radio" name="rate-sponsor" class="input-radio" value="6"><span class="sm-text">6</span></label>
+                <label><input type="radio" name="rate-sponsor" class="input-radio" value="7"><span class="sm-text">7</span></label>
+                <label><input type="radio" name="rate-sponsor" class="input-radio" value="8"><span class="sm-text">8</span></label>
+                <label><input type="radio" name="rate-sponsor" class="input-radio" value="9"><span class="sm-text">9</span></label>
+                <label><input type="radio" name="rate-sponsor" class="input-radio" value="10"><span class="sm-text">10</span></label>
+
+            </div>
+            <div class="form-group">
+                <p>How likely are you to recommend this event as a sponsorship opportunity?</p>
+                <p class="xs-text">1 - Not at all likely &nbsp; 10 - Very likely</p>
+                <label><input type="radio" name="recommend-sponsor" class="input-radio" value="1"><span class="sm-text">1</span></label>
+                <label><input type="radio" name="recommend-sponsor" class="input-radio" value="2"><span class="sm-text">2</span></label>
+                <label><input type="radio" name="recommend-sponsor" class="input-radio" value="3"><span class="sm-text">3</span></label>
+                <label><input type="radio" name="recommend-sponsor" class="input-radio" value="4"><span class="sm-text">4</span></label>
+                <label><input type="radio" name="recommend-sponsor" class="input-radio" value="5"><span class="sm-text">5</span></label>
+                <label><input type="radio" name="recommend-sponsor" class="input-radio" value="6"><span class="sm-text">6</span></label>
+                <label><input type="radio" name="recommend-sponsor" class="input-radio" value="7"><span class="sm-text">7</span></label>
+                <label><input type="radio" name="recommend-sponsor" class="input-radio" value="8"><span class="sm-text">8</span></label>
+                <label><input type="radio" name="recommend-sponsor" class="input-radio" value="9"><span class="sm-text">9</span></label>
+                <label><input type="radio" name="recommend-sponsor" class="input-radio" value="10"><span class="sm-text">10</span></label>
+
+            </div>
+            <div class="form-group">
+                <p>Will we see you again next year?</p>
+                <label><input type="radio" name="again-sponsor" class="input-radio" value="yes"><span class="sm-text">Yes</span></label>
+                <label><input type="radio" name="again-sponsor" class="input-radio" value="no"><span class="sm-text">No</span></label>
+                
+
+            </div>
+            <div class="form-group">
+                <p>What, if anything, did you dislike about this event?</p>
+                <textarea name="dislike-sponsors" id="textarea-dislike-sponsors" class="input-textarea form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <p>Is there any thing else you would like us to know?</p>
+                <textarea name="comment-sponsors" id="comment-sponsors" class="input-textarea form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit-sponsors" class="form-control submit">Submit</button>
+            </div>
+        </form>
+        </div>
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
