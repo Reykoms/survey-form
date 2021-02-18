@@ -80,7 +80,7 @@ textarea, input, select {
 
 
 #wrapper {
-    width: 600px;
+    max-width: 37.5rem;
     background-color: var(--secondary-color);
     color: white;
     margin: 1rem auto;
